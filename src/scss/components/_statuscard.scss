@@ -4,6 +4,12 @@
         @include flex-row;
         padding: 10px 0;
         position: relative;
+        cursor: pointer;
+        transition: background-color 200ms ease;
+
+        &:hover {
+            background-color: var(--color-grey-100);
+        }
 
         &__imagebox {
             flex: 0 0 54px;

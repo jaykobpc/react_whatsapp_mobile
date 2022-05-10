@@ -7,9 +7,21 @@
 }
 
 * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        margin: 0 10px;
+    }
+
+
     &::-webkit-scrollbar {
+        width: 8px !important;
+        height: 8px !important;
+
 
         @include respond(tab-port) {
             display: none;
@@ -17,6 +29,7 @@
     }
 
     &::-webkit-scrollbar-track {
+        background: hsla(0, 0%, 100%, 0.1);
 
         @include respond(tab-port) {
             display: none;
@@ -78,14 +91,16 @@ a {
     text-decoration: none;
 }
 
+//measured from browser-dev-tools
 [device-frame] {
     width: 450px;
     margin: 0 auto;
     height: 768px;
     top: 50px;
-    border: 13px solid var(--color-grey-400);
+    border: 13px solid var(--color-grey-500);
     border-radius: 12px;
 
+    //unset rules on small devices
     @include respond(tab-port) {
         width: 100%;
         height: auto;

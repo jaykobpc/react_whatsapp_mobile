@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
+
 const Chatcard = ({ cardImage, userName, timeStamp, messageContext, unreadCount }) => {
     return (
-        <div className="homeview__chatcard">
+        <Link draggable="false" to="/chat" className="homeview__chatcard">
             <div className="homeview__chatcard__imagebox">
                 <img src={cardImage} alt={userName} draggable="false" className="homeview__chatcard__imagebox__img" />
             </div>
@@ -14,7 +16,7 @@ const Chatcard = ({ cardImage, userName, timeStamp, messageContext, unreadCount 
                     {unreadCount !== 0 && <span className="homeview__chatcard__contextgroup__counter">{unreadCount}</span>}
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
