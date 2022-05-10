@@ -1,0 +1,82 @@
+.homeview {
+    &__chatcard {
+        @include flex-row;
+        padding: 10px 0 5px 0;
+        position: relative;
+
+        &__imagebox {
+            margin: 0 8px;
+            flex: 0 0 54px;
+
+            &__img {
+                width: 54px;
+                height: 54px;
+                border-radius: 50%;
+                object-fit: cover;
+                background-color: var(--color-grey-300);
+                opacity: 1;
+            }
+        }
+
+        &__textview {
+            @include flex-column;
+            padding: 0 6px;
+            width: 100%;
+            padding-bottom: 15px;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                height: 1px;
+                background-color: var(--color-grey-100);
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
+
+        &__metagroup {
+            @include flex-row;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 2;
+
+            &__title {
+                font-size: 15px;
+                font-weight: 500;
+                color: var(--color-grey-800);
+            }
+
+            &__timestamp {
+                font-size: 11px;
+                color: var(--color-grey-600);
+            }
+        }
+
+        &__contextgroup {
+            @include flex-row;
+            justify-content: space-between;
+            align-items: center;
+
+            &__text {
+                font-size: 13px;
+                font-weight: 300;
+                color: var(--color-grey-700);
+            }
+
+            &__counter {
+                font-size: 11px;
+                background-color: var(--color-light-green);
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

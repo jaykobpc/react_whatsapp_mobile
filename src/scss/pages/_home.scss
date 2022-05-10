@@ -1,0 +1,35 @@
+.homeview {
+    @include flex-column-overflow-y;
+    height: 100%;
+
+    &__chatlist {
+        @include flex-column-overflow-y;
+
+        &__group {
+            @include flex-column;
+
+            &__title {
+                padding: 5px 8px;
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--color-grey-700);
+            }
+        }
+    }
+
+    &__fabutton {
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        border: none;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--color-medium-green);
+        color: var(--color-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}

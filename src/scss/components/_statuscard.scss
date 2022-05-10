@@ -1,0 +1,70 @@
+.homeview {
+
+    &__statuscard {
+        @include flex-row;
+        padding: 10px 0;
+        position: relative;
+
+        &__imagebox {
+            flex: 0 0 54px;
+            margin: 0 5px;
+            position: relative;
+
+            &__wrapper {
+                width: 54px;
+                height: 54px;
+                border-radius: 50%;
+                color: var(--color-white);
+                overflow: hidden;
+            }
+
+            &__img {
+                width: 54px;
+                height: 54px;
+                border-radius: 50%;
+                object-fit: cover;
+
+            }
+
+            &__iconadd {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                background-color: var(--color-medium-green);
+                color: var(--color-white);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        &__textview {
+            width: 100%;
+            @include flex-column;
+            padding: 0 5px;
+
+            &__title {
+                line-height: 1.7;
+                font-weight: 500;
+                color: var(--color-grey-800);
+            }
+
+            &__timestamp {
+                font-weight: 300;
+                font-size: 13px;
+                color: var(--color-grey-700);
+            }
+        }
+    }
+}
+
+.pending-border {
+    border: 3px solid var(--color-medium-green);
+}

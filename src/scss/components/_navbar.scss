@@ -1,0 +1,32 @@
+.navbar {
+    background-color: var(--color-medium-green);
+
+    &__container {
+        @include flex-column;
+        padding: 8px 8px;
+    }
+
+    &__titlebox {
+        @include flex-row;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
+            font-size: 18px;
+            color: var(--color-white);
+            font-weight: 400;
+            letter-spacing: 0.0855px;
+        }
+
+        &__icongroup {
+            @include flex-row;
+
+            &__icon {
+                @include icon-button;
+                margin-left: 6px;
+                color: var(--color-white);
+                cursor: pointer;
+            }
+        }
+    }
+}

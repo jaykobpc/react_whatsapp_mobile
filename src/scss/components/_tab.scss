@@ -1,0 +1,52 @@
+.tabview {
+    @include flex-column;
+    overflow-y: auto;
+    height: 100%;
+
+    &__header {
+        @include flex-row;
+        background-color: var(--color-medium-green);
+        position: sticky;
+
+        &__button {
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            background-color: var(--color-medium-green);
+            position: relative;
+            color: var(--color-white);
+            padding: 10px 0px;
+            border: none;
+            width: 100%;
+
+            &:nth-child(1) {
+                flex: 0;
+                padding-left: 6px;
+                padding-right: 6px;
+                font-size: 12px;
+                align-self: center;
+            }
+        }
+    }
+
+    &__container {
+        overflow-y: auto;
+    }
+}
+
+.tab__highlight {
+    font-weight: 600;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        width: 100%;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        background-color: var(--color-grey-100);
+    }
+}

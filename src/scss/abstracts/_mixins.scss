@@ -1,0 +1,68 @@
+@mixin respond ($breakpoint) {
+    //
+
+    @if $breakpoint==small-phone {
+        @media only screen and (max-width: 25em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==phone {
+        @media only screen and (max-width: 37.5em) {
+            //600px
+            @content;
+        }
+    }
+
+    @if $breakpoint==tab-port {
+        @media only screen and (max-width: 56.25em) {
+            //900px;
+            @content;
+        }
+    }
+
+    @if $breakpoint==tab-land {
+        @media only screen and (max-width: 75em) {
+            //1200px;
+            @content;
+        }
+    }
+
+    @if $breakpoint==big-desktop {
+        @media only screen and (max-width: 112.5em) {
+            //1800px;
+            @content;
+        }
+    }
+}
+
+@mixin flex-row-centered {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin flex-column-overflow-y {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+@mixin icon-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
