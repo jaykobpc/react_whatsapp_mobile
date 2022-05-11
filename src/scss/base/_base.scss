@@ -54,9 +54,9 @@ img {
 
 input,
 textarea {
-    -webkit-writing-mode: horizontal-tb !important;
-    -moz-writing-mode: horizontal-tb !important;
-    writing-mode: horizontal-tb !important;
+    -webkit-writing-mode: horizontal-tb;
+    -moz-writing-mode: horizontal-tb;
+    writing-mode: horizontal-tb;
     -webkit-appearance: none;
     font-family: inherit;
     appearance: none;
