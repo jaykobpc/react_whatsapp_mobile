@@ -16,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     disableImageContextMenu();
-  });
+  }, []);
 
   return (
     <main role="main" className="bg-white h-full no-select">
