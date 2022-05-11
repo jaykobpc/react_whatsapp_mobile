@@ -1,0 +1,72 @@
+.homeview {
+
+    &__callcard {
+        @include flex-row;
+        padding: 10px 0px;
+        cursor: pointer;
+        transition: background-color 200ms ease;
+
+        &:hover {
+            background-color: var(--color-grey-100);
+        }
+
+        &__imagebox {
+            flex: 0 0 55px;
+            margin: 0 8px;
+
+            &__img {
+                width: 54px;
+                height: 54px;
+                border-radius: 50%;
+                object-fit: cover;
+                background-color: var(--color-grey-400);
+            }
+        }
+
+        &__contextview {
+            flex: 1;
+
+            &__title {
+                line-height: 1.8;
+                font-size: 16px;
+                font-weight: 400;
+                color: var(--color-grey-800);
+            }
+
+            &__group {
+                @include flex-row;
+                padding: 5px 0;
+            }
+
+            &__callstatus {
+                margin-right: 5px;
+
+                svg {
+                    font-size: 18px;
+                }
+            }
+
+            &__timestamp {
+                font-weight: 300;
+                font-size: 14px;
+                color: var(--color-grey-800);
+            }
+        }
+
+        &__calltype {
+            padding: 0 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--color-medium-green);
+        }
+    }
+}
+
+.color-green {
+    color: var(--color-light-green);
+}
+
+.color-red {
+    color: red;
+}

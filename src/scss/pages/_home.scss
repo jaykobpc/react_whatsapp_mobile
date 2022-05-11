@@ -22,11 +22,27 @@
         bottom: 30px;
         right: 20px;
         border: none;
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
         border-radius: 50%;
         background-color: var(--color-medium-green);
         color: var(--color-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__fabedit {
+        position: absolute;
+        bottom: 95px;
+        right: 20px;
+        border: none;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: var(--color-grey-400);
+        color: var(--color-grey-600);
         display: flex;
         justify-content: center;
         align-items: center;

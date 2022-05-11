@@ -1,0 +1,142 @@
+.contactsview {
+    @include flex-column;
+    height: 100%;
+
+    &__navbar {
+        @include flex-row;
+        background-color: var(--color-medium-green);
+        padding: 8px 8px;
+
+        &__iconbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: var(--color-white);
+
+            svg {
+                font-size: 20px;
+            }
+        }
+
+        &__textview {
+            flex: 1;
+            padding: 0 15px;
+            color: var(--color-white);
+
+            &__title {
+                font-size: 15px;
+                line-height: 1.5;
+                font-weight: 600;
+            }
+
+            &__smtitle {
+                font-size: 13px;
+                font-weight: 300;
+            }
+        }
+
+        &__icongroup {
+            @include flex-row;
+            align-items: center;
+
+            &__iconbox {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--color-white);
+                margin-left: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__listview {
+        @include flex-column;
+        overflow-y: auto;
+    }
+
+    &__contactcard__linkbox {
+        @include flex-row;
+        padding: 12px 10px;
+        cursor: pointer;
+        align-items: center;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: var(--color-grey-100);
+        }
+
+        &__icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: var(--color-medium-green);
+            color: var(--color-white);
+
+            svg {
+                font-size: 18px;
+            }
+        }
+
+        &__text {
+            flex: 1;
+            margin: 0 25px;
+            font-size: 15px;
+            color: var(--color-grey-800);
+        }
+
+        &__tabicon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 15px;
+
+            svg {
+                color: var(--color-medium-green);
+            }
+        }
+    }
+
+    &__contactitem {
+        @include flex-row;
+        padding: 10px 10px;
+
+        &__imagebox {
+            flex: 0 0 55px;
+
+            &__img {
+                width: 54px;
+                height: 54px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        &__textview {
+            padding: 0 8px;
+            flex: 1;
+            color: var(--color-grey-700);
+
+            &__title {
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 1.8;
+            }
+
+            &__smtitle {
+                font-size: 13px;
+                font-weight: 300;
+            }
+        }
+    }
+}

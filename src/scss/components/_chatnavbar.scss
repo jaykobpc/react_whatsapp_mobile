@@ -1,0 +1,70 @@
+.chatview__navbar {
+    background-color: var(--color-medium-green);
+    @include flex-row;
+    align-items: center;
+    padding: 8px 5px;
+
+    &__iconbox {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-white);
+        cursor: pointer;
+
+        svg {
+            font-size: 18px;
+        }
+    }
+
+    &__imagebox {
+        margin: 0 5px;
+        flex: 0 0 40px;
+
+        &__img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: var(--color-grey-400);
+        }
+    }
+
+    &__textview {
+        flex: 1;
+        color: var(--color-white);
+
+        &__title {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        &__smtitle {
+            font-size: 13px;
+            font-weight: 300;
+        }
+    }
+
+    &__icongroup {
+        @include flex-row;
+
+        &__iconbox {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 5px;
+            color: var(--color-white);
+            cursor: pointer;
+
+            svg {
+                font-size: 22px;
+            }
+        }
+    }
+}

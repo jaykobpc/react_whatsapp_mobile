@@ -17,3 +17,23 @@
 .fw-600 {
     font-weight: 600 !important;
 }
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.bg-light-green {
+    background-color: var(--color-tea-green);
+}
+
+.bg-light-gray {
+    background-color: var(--color-grey-100);
+}
+
+.bg-blue {
+    color: var(--color-picton-blue);
+}

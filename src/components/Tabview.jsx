@@ -6,11 +6,12 @@ import Chats from './Home/Chats';
 import Status from './Home/Status';
 import Calls from './Home/Calls';
 
-const Tabview = () => {
+const Tabview = ({ updateTab }) => {
     const [activeTab, setActiveTab] = useState('chats');
 
     const toggleTab = (tabname) => {
         setActiveTab(tabname);
+        updateTab(tabname);
     }
 
     return (
@@ -19,9 +20,12 @@ const Tabview = () => {
                 <button className="tabview__header__button">
                     <PhotoCameraIcon />
                 </button>
-                <button onClick={() => toggleTab('chats')} className={`tabview__header__button ${activeTab  === 'chats' ? 'tab__highlight' : ''}`}>CHATS</button>
+                <button onClick={() => toggleTab('chats')} className={`tabview__header__button ${activeTab === 'chats' ? 'tab__highlight' : ''}`}>
+                    CHATS
+                    <span className='tabview__counter'>5</span>
+                </button>
                 <button onClick={() => toggleTab('status')} className={`tabview__header__button ${activeTab === 'status' ? 'tab__highlight' : ''}`}>STATUS</button>
-                <button onClick={() => toggleTab('calls')} className={`tabview__header__button ${activeTab  === 'calls' ? 'tab__highlight' : ''}`}>CALLS</button>
+                <button onClick={() => toggleTab('calls')} className={`tabview__header__button ${activeTab === 'calls' ? 'tab__highlight' : ''}`}>CALLS</button>
             </div>
             <div className="tabview__container">
                 {activeTab === 'chats' &&

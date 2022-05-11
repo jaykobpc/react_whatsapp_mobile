@@ -29,6 +29,15 @@
         }
     }
 
+    &__counter {
+        margin: 0 5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--color-grey-400);
+        padding: 1px 5px;
+    }
+
     &__container {
         overflow-y: auto;
     }

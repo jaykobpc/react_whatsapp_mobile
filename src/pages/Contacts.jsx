@@ -1,6 +1,12 @@
+import Navbar from "../components/Contacts/Navbar"
+import ContactList from "../components/Contacts/ContactList"
+
 const Contacts = () => {
     return (
-        <div>Contacts</div>
+        <section className="contactsview">
+            <Navbar />
+            <ContactList />
+        </section>
     )
 }
 

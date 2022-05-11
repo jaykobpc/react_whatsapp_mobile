@@ -1,0 +1,137 @@
+.settingsview {
+    @include flex-column;
+    height: 100%;
+
+    &__navbar {
+        background-color: var(--color-medium-green);
+        @include flex-row;
+        align-items: center;
+        padding: 9px 8px;
+
+        &__icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: var(--color-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                font-size: 20px;
+                color: var(--color-white);
+            }
+        }
+
+        &__title {
+            font-size: 16px;
+            color: var(--color-white);
+            font-weight: 500;
+            margin: 0 15px;
+        }
+    }
+
+    &__profilebox {
+        @include flex-row;
+        padding: 15px 8px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            background-color: var(--color-grey-100);
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        &__imagebox {
+            flex: 0 0 70px;
+
+            &__img {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                object-fit: cover;
+                background-color: var(--color-grey-400);
+            }
+        }
+
+        &__textview {
+            flex: 1;
+            padding: 5px 10px;
+
+            &__title {
+                line-height: 1.8;
+                font-size: 18px;
+                font-weight: 600;
+                color: var(--color-grey-800);
+            }
+
+            &__smtitle {
+                font-size: 13px;
+                font-weight: 300;
+                color: var(--color-grey-600);
+            }
+        }
+
+        &__iconbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 15px;
+
+            svg {
+                color: var(--color-medium-green);
+            }
+        }
+    }
+
+    &__optionslist {
+        @include flex-column;
+    }
+
+    &__optionscard {
+        @include flex-row;
+        padding: 15px 8px;
+        cursor: pointer;
+        transition: background-color 0.35s ease;
+
+        &:hover {
+            background-color: var(--color-grey-100);
+        }
+
+        &__iconbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 15px;
+
+            svg {
+                color: var(--color-grey-700);
+                font-size: 22px;
+            }
+        }
+
+        &__textview {
+            padding: 0 5px;
+            flex: 1;
+
+            &__title {
+                font-size: 15px;
+                color: var(--color-grey-700);
+                line-height: 1.8;
+                font-weight: 500;
+            }
+
+            &__smtext {
+                font-size: 13px;
+                color: var(--color-grey-700);
+                font-weight: 300;
+            }
+        }
+    }
+}

@@ -5,9 +5,16 @@
 @import "./base/typography";
 @import "./base/utilities";
 
+@import "./components/callscard";
 @import "./components/chatcard";
+@import "./components/chatmessagebox";
+@import "./components/chatnavbar";
+@import "./components/chatviewlist";
 @import "./components/navbar";
 @import "./components/statuscard";
 @import "./components/tab";
 
+@import "./pages/chat";
+@import "./pages/contacts";
 @import "./pages/home";
+@import "./pages/settings";

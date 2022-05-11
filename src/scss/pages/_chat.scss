@@ -1,0 +1,23 @@
+.chatview {
+    height: 100%;
+    position: relative;
+    background-color: var(--color-white-chocolate);
+
+    &__imagebox {
+        height: 100%;
+        background-image: url('../../assets/whatsappbg.png');
+        background-color: var(--color-white-chocolate);
+        opacity: .06;
+        z-index: 0;
+    }
+
+    &__wrapper {
+        @include flex-column;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+}

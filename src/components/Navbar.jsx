@@ -1,7 +1,29 @@
 import SearchIcon from '@mui/icons-material/Search';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import OptionsDialog from './Home/widgets/OptionsDialog';
+import { useState, useEffect } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ activeTab }) => {
+    const [dialogStatus, setDialogStatus] = useState(false)
+
+    const toggleDialog = () => {
+        dialogStatus === false ? setDialogStatus(true) : setDialogStatus(false);
+    }
+
+    const dialogFocusOut = () => {
+        if (dialogStatus === true) {
+            document.querySelector('.homeview').addEventListener('mouseup', (e) => {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                setDialogStatus(false);
+            })
+        }
+    }
+
+    useEffect(() => {
+        dialogFocusOut();
+    })
+
     return (
         <nav className="navbar">
             <div className="navbar__container">
@@ -11,10 +33,11 @@ const Navbar = () => {
                         <div role="button" className="navbar__titlebox__icongroup__icon">
                             <SearchIcon />
                         </div>
-                        <div role="button" className="navbar__titlebox__icongroup__icon">
+                        <div onClick={() => toggleDialog()} role="button" className="navbar__titlebox__icongroup__icon">
                             <MoreVertIcon />
                         </div>
                     </div>
+                    {dialogStatus && <OptionsDialog selectedTab={activeTab} />}
                 </div>
             </div>
         </nav>
