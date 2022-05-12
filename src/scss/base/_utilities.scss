@@ -37,3 +37,24 @@
 .bg-blue {
     color: var(--color-picton-blue);
 }
+
+.author__title {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.95px;
+    padding: 15px 0;
+    font-weight: 400;
+    color: var(--color-grey-700);
+    cursor: pointer;
+    text-decoration: underline;
+
+    @include respond(tab-port) {
+        display: none;
+    }
+}

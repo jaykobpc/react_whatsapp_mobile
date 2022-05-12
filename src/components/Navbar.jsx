@@ -25,7 +25,7 @@ const Navbar = ({ activeTab }) => {
     })
 
     return (
-        <nav className="navbar">
+        <nav className="navbar no-select">
             <div className="navbar__container">
                 <div className="navbar__titlebox">
                     <h3 className="navbar__titlebox__title">WhatsApp</h3>
